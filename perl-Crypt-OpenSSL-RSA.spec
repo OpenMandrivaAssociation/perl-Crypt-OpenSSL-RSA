@@ -15,7 +15,6 @@ Requires:	openssl
 Buildrequires:	perl-devel
 BuildRequires:	perl-Crypt-OpenSSL-Random
 Buildrequires:	openssl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 %{module} module for perl
