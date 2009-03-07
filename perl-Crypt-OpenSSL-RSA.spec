@@ -1,7 +1,7 @@
 %define	module	Crypt-OpenSSL-RSA
 %define name	perl-%{module}
 %define version	0.25
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary:	%{module} module for perl 
 Name:		%{name}
