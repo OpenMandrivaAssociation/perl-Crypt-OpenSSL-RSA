@@ -1,27 +1,27 @@
-%define	module	Crypt-OpenSSL-RSA
-%define name	perl-%{module}
-%define version	0.25
-%define release %mkrel 4
+%define	upstream_name	 Crypt-OpenSSL-RSA
+%define upstream_version 0.25
 
-Summary:	%{module} module for perl 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	%{upstream_name} module for perl 
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Crypt/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Crypt/%{upstream_name}-%{upstream_version}.tar.bz2
+
 Requires:	openssl
 Buildrequires:	perl-devel
 BuildRequires:	perl-Crypt-OpenSSL-Random
 Buildrequires:	openssl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
-%{module} module for perl
+%{upstream_name} module for perl
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,5 +43,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/auto/Crypt
 %{perl_vendorarch}/Crypt
 %{_mandir}/man*/*
-
-
