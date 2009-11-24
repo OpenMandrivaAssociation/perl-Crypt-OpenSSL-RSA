@@ -1,5 +1,5 @@
 %define	upstream_name	 Crypt-OpenSSL-RSA
-%define upstream_version 0.25
+%define upstream_version 0.26
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	%{upstream_name} module for perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Crypt/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Crypt/%{upstream_name}-%{upstream_version}.tar.gz
 
 Requires:	openssl
 Buildrequires:	perl-devel
