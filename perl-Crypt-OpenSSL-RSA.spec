@@ -3,7 +3,7 @@
 
 Version:	%perl_convert_version %{modver}
 Name:		perl-%{modname}
-Release:	15
+Release:	16
 Summary:	%{modname} module for perl 
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
