@@ -1,9 +1,9 @@
 %define	modname	Crypt-OpenSSL-RSA
-%define modver	0.28
+%define modver	0.31
 
 Version:	%perl_convert_version %{modver}
 Name:		perl-%{modname}
-Release:	16
+Release:	1
 Summary:	%{modname} module for perl 
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
