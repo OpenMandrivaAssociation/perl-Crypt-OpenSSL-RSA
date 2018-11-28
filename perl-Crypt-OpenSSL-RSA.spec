@@ -24,9 +24,6 @@ BuildRequires:	pkgconfig(openssl)
 %__perl Makefile.PL INSTALLDIRS=vendor
 %make CFLAGS="%{optflags}"
 
-%check
-%make test
-
 %install
 %makeinstall_std
 
