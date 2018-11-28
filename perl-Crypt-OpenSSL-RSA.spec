@@ -11,6 +11,7 @@ Url:		http://search.cpan.org/dist/%{modname}
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Crypt/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	perl-Crypt-OpenSSL-Random
+BuildRequires:  perl(Crypt::OpenSSL::Guess)
 BuildRequires:	pkgconfig(openssl)
 
 %description
