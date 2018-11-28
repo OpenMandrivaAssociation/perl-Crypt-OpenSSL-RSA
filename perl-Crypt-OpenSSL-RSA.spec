@@ -1,9 +1,9 @@
 %define	modname	Crypt-OpenSSL-RSA
-%define modver	0.28
+%define modver	0.31
 
 Version:	%perl_convert_version %{modver}
 Name:		perl-%{modname}
-Release:	16
+Release:	1
 Summary:	%{modname} module for perl 
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
@@ -11,6 +11,7 @@ Url:		http://search.cpan.org/dist/%{modname}
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Crypt/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	perl-Crypt-OpenSSL-Random
+BuildRequires:  perl(Crypt::OpenSSL::Guess)
 BuildRequires:	pkgconfig(openssl)
 
 %description
@@ -22,9 +23,6 @@ BuildRequires:	pkgconfig(openssl)
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
 %make CFLAGS="%{optflags}"
-
-%check
-%make test
 
 %install
 %makeinstall_std
