@@ -3,7 +3,7 @@
 
 Version:	%perl_convert_version %{modver}
 Name:		perl-%{modname}
-Release:	1
+Release:	2
 Summary:	%{modname} module for perl 
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
@@ -22,10 +22,10 @@ BuildRequires:	pkgconfig(openssl)
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make CFLAGS="%{optflags}"
+%make_build CFLAGS="%{optflags}"
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README
