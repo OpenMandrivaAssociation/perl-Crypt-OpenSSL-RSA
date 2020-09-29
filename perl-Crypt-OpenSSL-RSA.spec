@@ -3,7 +3,7 @@
 
 Version:	%perl_convert_version %{modver}
 Name:		perl-%{modname}
-Release:	2
+Release:	3
 Summary:	%{modname} module for perl 
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
@@ -21,7 +21,7 @@ BuildRequires:	pkgconfig(openssl)
 %setup -qn %{modname}-%{modver}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make_build CFLAGS="%{optflags}"
 
 %install
@@ -32,4 +32,3 @@ BuildRequires:	pkgconfig(openssl)
 %{perl_vendorarch}/auto/Crypt
 %{perl_vendorarch}/Crypt
 %{_mandir}/man3/*
-
