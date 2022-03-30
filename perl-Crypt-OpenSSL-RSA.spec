@@ -1,5 +1,8 @@
-%define	modname	Crypt-OpenSSL-RSA
-%define modver	0.31
+# Work around incomplete debug packages
+%global _empty_manifest_terminate_build 0
+
+%define modname Crypt-OpenSSL-RSA
+%define modver 0.31
 
 Version:	%perl_convert_version %{modver}
 Name:		perl-%{modname}
@@ -18,7 +21,7 @@ BuildRequires:  perl(Crypt::OpenSSL::Guess)
 BuildRequires:	pkgconfig(openssl)
 
 %description
-%{modname} module for perl
+%{modname} module for perl.
 
 %prep
 %autosetup -p1 -n %{modname}-%{modver}
@@ -34,4 +37,4 @@ perl Makefile.PL INSTALLDIRS=vendor
 %doc Changes README
 %{perl_vendorarch}/auto/Crypt
 %{perl_vendorarch}/Crypt
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
