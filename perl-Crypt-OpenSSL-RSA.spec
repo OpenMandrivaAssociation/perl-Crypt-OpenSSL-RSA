@@ -10,7 +10,7 @@ Release:	3
 Summary:	%{modname} module for perl 
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		https://search.cpan.org/dist/%{modname}
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Crypt/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	perl-Crypt-OpenSSL-Random
