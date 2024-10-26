@@ -1,17 +1,13 @@
-# Work around incomplete debug packages
-%global _empty_manifest_terminate_build 0
-
 %define modname Crypt-OpenSSL-RSA
-%define modver 0.33
 
-Version:	%perl_convert_version %{modver}
+Version:	0.33
 Name:		perl-%{modname}
-Release:	4
+Release:	1
 Summary:	%{modname} module for perl 
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Crypt/%{modname}-%{modver}.tar.gz
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Crypt/%{modname}-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	perl-Crypt-OpenSSL-Random
 BuildRequires:  perl(Crypt::OpenSSL::Guess)
@@ -21,7 +17,7 @@ BuildRequires:	pkgconfig(openssl)
 %{modname} module for perl.
 
 %prep
-%autosetup -p1 -n %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
