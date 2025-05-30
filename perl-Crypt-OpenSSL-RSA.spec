@@ -1,6 +1,6 @@
 %define modname Crypt-OpenSSL-RSA
 
-Version:	0.33
+Version:	0.35
 Name:		perl-%{modname}
 Release:	1
 Summary:	%{modname} module for perl 
